@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Рабочий поселок "Старая Кулатка"</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Jura', 'Arial', sans-serif;
+            color: #1a3a5c;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        .header {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            background: url('header-bckgr.jpg') center center / cover no-repeat;
+            background-color: #4a7a9b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+            font-family: 'Cormorant SC', serif;
+        }
+
+        .header h2 {
+            font-size: 28px;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+            font-family: 'Cormorant SC', serif;
+        }
+
+        .header-line {
+            width: 80%;
+            max-width: 1000px;
+            height: 2px;
+            background: rgba(255,255,255,0.7);
+            margin-bottom: 30px;
+        }
+
+        .header-tagline {
+            background: rgba(100, 120, 130, 0.55);
+            padding: 15px 60px;
+            font-size: 26px;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+            font-family: 'Cormorant SC', serif;
+        }
+
+        /* NAV */
+        .nav {
+            background: #6b7b8d;
+            text-align: center;
+            padding: 14px 0;
+        }
+
+        .nav a {
+            color: #d0d8e0;
+            text-decoration: none;
+            font-size: 15px;
+            font-style: italic;
+            margin: 0 5px;
+        }
+
+        .nav a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .nav span {
+            color: #a0aab4;
+            margin: 0 3px;
+        }
+
+        /* REGISTER FORM */
+        .register-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 50px 30px 80px;
+        }
+
+        .register-box {
+            background: #f5f7fa;
+            border: 2px solid #b0c4d8;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .register-box h2 {
+            text-align: center;
+            font-family: 'Cormorant SC', serif;
+            font-size: 32px;
+            color: #1a3a6c;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .register-subtitle {
+            text-align: center;
+            font-family: 'Jura', sans-serif;
+            font-size: 14px;
+            color: #626D7A;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+
+        .form-group {
+            margin-bottom: 22px;
+        }
+
+        .form-group label {
+            display: block;
+            font-family: 'Cormorant SC', serif;
+            font-weight: 600;
+            color: #1a3a6c;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 12px 15px;
+            font-family: 'Jura', sans-serif;
+            font-size: 14px;
+            border: 1px solid #b0c4d8;
+            border-radius: 4px;
+            background: #fff;
+            color: #1a3a5c;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2a5a8c;
+            box-shadow: 0 0 8px rgba(42, 90, 140, 0.3);
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        .required {
+            color: #c0392b;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin: 25px 0;
+            padding: 15px;
+            background: #e8eef4;
+            border-radius: 4px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-top: 2px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            font-family: 'Jura', sans-serif;
+            font-size: 13px;
+            color: #626D7A;
+            margin: 0;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        .checkbox-group a {
+            color: #2a5a8c;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .checkbox-group a:hover {
+            text-decoration: underline;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            font-family: 'Cormorant SC', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #fff;
+            background: linear-gradient(135deg, #2a5a8c 0%, #1a3a6c 100%);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(42, 90, 140, 0.3);
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #1a3a6c 0%, #0d2847 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(42, 90, 140, 0.4);
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 25px;
+            font-family: 'Jura', sans-serif;
+            font-size: 15px;
+            color: #626D7A;
+        }
+
+        .login-link a {
+            color: #2a5a8c;
+            font-weight: 600;
+            text-decoration: none;
+            font-family: 'Cormorant SC', serif;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #6b7b8d;
+            text-align: center;
+            padding: 25px;
+            color: #c0c8d0;
+            font-size: 13px;
+            font-style: italic;
+            font-family: 'Jura', sans-serif;
+        }
+
+        .footer a {
+            color: #c0c8d0;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+            
+            .header h2 {
+                font-size: 22px;
+            }
+            
+            .header-tagline {
+                font-size: 20px;
+                padding: 12px 30px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .register-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>Рабочий поселок "Старая Кулатка"</h1>
+        <h2>Неофициальный портал</h2>
+        <div class="header-line"></div>
+        <div class="header-tagline">Регистрация нового пользователя</div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="nav">
+        <a href="index.html">Главная страница</a>
+        <span>|</span>
+        <a href="gallery.html">Галерея</a>
+        <span>|</span>
+        <a href="history.html">Из истории</a>
+        <span>|</span>
+        <a href="chronicle.html">Летопись</a>
+        <span>|</span>
+        <a href="feedback.html">Обратная связь</a>
+    </div>
+
+    <!-- REGISTER FORM -->
+    <div class="register-container">
+        <div class="register-box">
+            <h2>Регистрация на сайте</h2>
+            <p class="register-subtitle">
+                Создайте аккаунт чтобы получить доступ ко всем возможностям портала
+            </p>
+
+            <form action="#" method="post" id="registerForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="lastname">Фамилия <span class="required">*</span></label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Введите фамилию" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="firstname">Имя <span class="required">*</span></label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Введите имя" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="middlename">Отчество</label>
+                    <input type="text" id="middlename" name="middlename" placeholder="Введите отчество">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Электронная почта <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (___) ___-__-__">
+                </div>
+
+                <div class="form-group">
+                    <label for="username">Имя пользователя (логин) <span class="required">*</span></label>
+                    <input type="text" id="username" name="username" placeholder="Придумайте логин" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Пароль <span class="required">*</span></label>
+                    <input type="password" id="password" name="password" placeholder="Минимум 8 символов" required minlength="8">
+                </div>
+
+                <div class="form-group">
+                    <label for="password_confirm">Подтвердите пароль <span class="required">*</span></label>
+                    <input type="password" id="password_confirm" name="password_confirm" placeholder="Повторите пароль" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">Я согласен с <a href="#">условиями использования</a> и <a href="#">политикой конфиденциальности</a> <span class="required">*</span></label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Хочу получать новости Старокулаткинского района</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Зарегистрироваться</button>
+            </form>
+
+            <div class="login-link">
+                Уже есть аккаунт? <a href="index.html">Войти на сайт</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        Материал взят из официальных источников:<br>
+        <a href="#">starokulatka.ru</a><br>
+        <a href="http://ru.wikipedia.org">ru.wikipedia.org</a>
+    </div>
+
+    <script>
+        // Валидация формы
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const passwordConfirm = document.getElementById('password_confirm').value;
+            
+            if (password !== passwordConfirm) {
+                alert('Пароли не совпадают!');
+                return;
+            }
+            
+            if (password.length < 8) {
+                alert('Пароль должен содержать минимум 8 символов!');
+                return;
+            }
+            
+            // Здесь можно добавить отправку данных на сервер
+            alert('Регистрация успешна! Теперь вы можете войти на сайт.');
+            window.location.href = 'index.html';
+        });
+
+        // Маска для телефона
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value[0] === '7' || value[0] === '8') {
+                    value = value.substring(1);
+                }
+                let formattedValue = '+7';
+                if (value.length > 0) {
+                    formattedValue += ' (' + value.substring(0, 3);
+                }
+                if (value.length >= 3) {
+                    formattedValue += ') ' + value.substring(3, 6);
+                }
+                if (value.length >= 6) {
+                    formattedValue += '-' + value.substring(6, 8);
+                }
+                if (value.length >= 8) {
+                    formattedValue += '-' + value.substring(8, 10);
+                }
+                e.target.value = formattedValue;
+            }
+        });
+    </script>
+
+</body>
+</html>

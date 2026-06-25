@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Летопись - Рабочий поселок "Старая Кулатка"</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #1a3a5c;
+            background: #fff;
+            line-height: 1.6;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            background: url('header-bckgr.jpg') center center / cover no-repeat;
+            background-color: #4a7a9b;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 28px;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+            margin-bottom: 30px;
+        }
+
+        .header-line {
+            width: 80%;
+            max-width: 1000px;
+            height: 2px;
+            background: rgba(255,255,255,0.7);
+            margin-bottom: 30px;
+        }
+
+        .header-tagline {
+            background: rgba(100, 120, 130, 0.55);
+            padding: 15px 60px;
+            font-size: 26px;
+            font-style: italic;
+            font-weight: bold;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+        }
+
+        .nav {
+            background: #6b7b8d;
+            text-align: center;
+            padding: 14px 0;
+        }
+
+        .nav a {
+            color: #d0d8e0;
+            text-decoration: none;
+            font-size: 15px;
+            font-style: italic;
+            margin: 0 5px;
+        }
+
+        .nav a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
+
+        .nav span {
+            color: #a0aab4;
+            margin: 0 3px;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 30px 60px;
+        }
+
+        .content h1 {
+            text-align: center;
+            font-size: 32px;
+            font-style: italic;
+            color: #1a3a6c;
+            margin-bottom: 40px;
+        }
+
+        .content h2 {
+            font-size: 22px;
+            font-style: italic;
+            color: #1a3a6c;
+            margin-top: 35px;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 18px;
+            text-align: justify;
+        }
+
+        .content .bold-text {
+            font-weight: bold;
+        }
+
+        .timeline {
+            margin: 30px 0;
+            padding-left: 30px;
+            border-left: 3px solid #2a5a8c;
+        }
+
+        .timeline-item {
+            margin-bottom: 25px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -39px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            background: #2a5a8c;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            box-shadow: 0 0 0 2px #2a5a8c;
+        }
+
+        .timeline-item .year {
+            font-weight: bold;
+            color: #1a3a6c;
+            font-size: 17px;
+            margin-bottom: 4px;
+        }
+
+        .timeline-item .event {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .era-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1a3a6c;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #b0c4d8;
+        }
+
+        .footer {
+            background: #6b7b8d;
+            text-align: center;
+            padding: 20px;
+            color: #c0c8d0;
+            font-size: 13px;
+            font-style: italic;
+        }
+
+        .footer a {
+            color: #c0c8d0;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Рабочий поселок "Старая Кулатка"</h1>
+        <h2>Неофициальный портал</h2>
+        <div class="header-line"></div>
+        <div class="header-tagline">Моя Родина "Старая Кулатка"</div>
+    </div>
+
+    <div class="nav">
+        <a href="index.html">Главная страница</a>
+        <span>|</span>
+        <a href="gallery.html">Галерея</a>
+        <span>|</span>
+        <a href="history.html">Из истории</a>
+        <span>|</span>
+        <a href="chronicle.html">Летопись</a>
+        <span>|</span>
+        <a href="feedback.html">Обратная связь</a>
+    </div>
+
+    <div class="content">
+        <h1>Летопись</h1>
+
+        <p style="text-align: center; font-style: italic; margin-bottom: 30px;">
+            Хроника важнейших событий в истории Старокулаткинского района
+        </p>
+
+        <div class="era-title">XVII–XVIII века. Основание и заселение</div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">Конец XVII века</div>
+                <div class="event">Царь Пётр I начинает политику заселения пограничных земель людьми татарского происхождения для укрепления границ Русского государства.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1704 год</div>
+                <div class="event">Начало заселения территории будущей Кулаткинской волости. Первые мурзы со своими приближёнными получают земли за воинскую службу.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1709 год</div>
+                <div class="event">Татарские конные войска из Кулаткинской волости участвуют в Полтавской битве.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1718 год</div>
+                <div class="event">Завершение основного этапа заселения деревни Кулатка. Сформировалось постоянное население волости.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1720 год</div>
+                <div class="event">Указ царя запрещает мурзам и служилым татарам держать крепостных христианской веры. Начало утраты привилегий.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">Вторая половина XVIII века</div>
+                <div class="event">Введение подушного обложения. Служилые татары приравнены к податному сословию. Большинство мурз разоряются и становятся государственными крестьянами.</div>
+            </div>
+        </div>
+
+        <div class="era-title">XIX век. Развитие края</div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">Начало XIX века</div>
+                <div class="event">Формирование села Старая Кулатка как центра волости Хвалынского уезда Саратовской губернии.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">Середина XIX века</div>
+                <div class="event">Строительство первых каменных зданий в селе: мечети, торговых лавок. Развитие ремёсел и торговли.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1861 год</div>
+                <div class="event">Отмена крепостного права. Крестьяне Кулаткинской волости получают личную свободу.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">Конец XIX века</div>
+                <div class="event">Открытие земской школы в Старой Кулатке. Начало систематического образования для детей местных жителей.</div>
+            </div>
+        </div>
+
+        <div class="era-title">Начало XX века. Революция и война</div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">1917 год</div>
+                <div class="event">Революционные события. Установление советской власти в Кулаткинской волости.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1918–1920 годы</div>
+                <div class="event">Гражданская война. Жители района участвуют в боевых действиях на стороне Красной армии.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1929–1930 годы</div>
+                <div class="event">Коллективизация. Создание колхозов на территории Кулаткинского района.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1941–1945 годы</div>
+                <div class="event">Великая Отечественная война. Более 3 тысяч жителей района ушли на фронт, многие не вернулись. В память о погибших позже установлен мемориал славы.</div>
+            </div>
+        </div>
+
+        <div class="era-title">1941–1991 годы. Советский период</div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">11 марта 1941 года</div>
+                <div class="event"><span class="bold-text">Образование Старокулаткинского района</span> в составе Саратовской области.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1943 год</div>
+                <div class="event">Район передан в состав newly образованной Ульяновской области.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1950–1960-е годы</div>
+                <div class="event">Укрупнение колхозов, строительство школ, больниц, дорог. Электрификация населённых пунктов района.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1960-е годы</div>
+                <div class="event">Строительство новых жилых домов, объектов социальной инфраструктуры в райцентре.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1970–1980-е годы</div>
+                <div class="event">Развитие сельскохозяйственного производства. Район становится одним из ведущих аграрных районов Ульяновской области.</div>
+            </div>
+        </div>
+
+        <div class="era-title">1991 год — настоящее время</div>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="year">1991 год</div>
+                <div class="event">Распад СССР. Начало рыночных реформ. Реорганизация колхозов и совхозов.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">1990-е годы</div>
+                <div class="event">Трудный период перехода к рыночной экономике. Закрытие ряда предприятий, отток населения.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">2000-е годы</div>
+                <div class="event">Стабилизация сельскохозяйственного производства. Создание фермерских хозяйств. Развитие социальной сферы.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">2005 год</div>
+                <div class="event">Муниципальная реформа. Старокулаткинский район получает статус муниципального образования.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">2010-е годы</div>
+                <div class="event">Модернизация объектов инфраструктуры, ремонт дорог, обновление школ и медицинских учреждений.</div>
+            </div>
+            <div class="timeline-item">
+                <div class="year">Наши дни</div>
+                <div class="event">Старокулаткинский район продолжает развиваться как аграрный регион Ульяновской области, сохраняя своё богатое культурное и историческое наследие.</div>
+            </div>
+        </div>
+
+        <p style="margin-top: 30px; font-style: italic; text-align: center; color: #6b7b8d;">
+            По материалам книги Х. А. Насырова «История Старокулаткинского района (1700–2000 гг.)» и архивных документов
+        </p>
+    </div>
+
+    <div class="footer">
+        Материал взят из официальных источников:<br>
+        <a href="#">starokulatka.ru</a><br>
+        <a href="http://ru.wikipedia.org">ru.wikipedia.org</a>
+    </div>
+
+</body>
+</html>
